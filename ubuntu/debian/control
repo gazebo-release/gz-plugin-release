@@ -1,25 +1,31 @@
 Source: ignition-plugin
-Standards-Version: 3.9.4
 Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
 Section: science
 Priority: extra
 Build-Depends: cmake,
-               debhelper (>= 7.0.50~),
+               debhelper (>= 11),
                doxygen,
-               libignition-cmake2-dev (>= 2.8.0),
-               python,
+               libignition-cmake2-dev (>= 2.8.0)  | libignition-cmake-dev (>= 2.8.0),
+               python3,
                ruby-ronn
-Vcs-Browser: https://bitbucket.org/ignitionrobotics/ign-plugin-release
-Vcs-Hg: https://bitbucket.org/ignitionrobotics/ign-plugin-release
-Homepage: https://bitbucket.org/ignitionrobotics/ign-plugin
+Vcs-Browser: https://github.com/ignitionrobotics/ignition-plugin
+Vcs-Git: https://github.com/ignitionrobotics/ignition-plugin.git
+Standards-Version: 4.5.1
+Homepage: https://github.com/ignitionrobotics/ign-plugin
 
 Package: libignition-plugin
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Breaks: libignition-plugin1-1  (>= 1.2.1+ds1)
+Replaces: libignition-plugin1-1  (>= 1.2.1+ds1)
 Multi-Arch: same
 Description: Ignition Robotics Plugin Library - Shared library
+ Ignition Plugin is a component in the ignition framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Package contains the shared library
 
 Package: libignition-plugin-dev
 Architecture: any
@@ -29,6 +35,10 @@ Depends: libignition-plugin (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Robotics Plugin Library - Development files
+ Ignition Plugin is a component in the ignition framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Package contains the development files
 
 Package: libignition-plugin-dbg
 Architecture: any
@@ -39,3 +49,7 @@ Depends:
      ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Robotics Plugin Library - Debugging symbols
+ Ignition Plugin is a component in the ignition framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Package contains debugging symbols
