@@ -8,10 +8,10 @@ Build-Depends: cmake,
                libignition-cmake2-dev (>= 2.8.0)  | libignition-cmake-dev (>= 2.8.0),
                python3,
                ruby-ronn
-Vcs-Browser: https://github.com/ignitionrobotics/ignition-plugin
-Vcs-Git: https://github.com/ignitionrobotics/ignition-plugin.git
+Vcs-Browser: https://github.com/gazebosim/gz-plugin
+Vcs-Git: https://github.com/gazebosim/gz-plugin.git
 Standards-Version: 4.5.1
-Homepage: https://github.com/ignitionrobotics/ign-plugin
+Homepage: https://github.com/gazebosim/gz-plugin
 
 Package: libignition-plugin
 Architecture: any
@@ -21,8 +21,8 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Breaks: libignition-plugin1-1  (>= 1.2.1+ds1)
 Replaces: libignition-plugin1-1  (>= 1.2.1+ds1)
 Multi-Arch: same
-Description: Ignition Robotics Plugin Library - Shared library
- Ignition Plugin is a component in the ignition framework, a set of libraries
+Description: Gazebo Plugin Library - Shared library
+ Gazebo Plugin is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
  .
  Package contains the shared library
@@ -34,8 +34,8 @@ Depends: libignition-plugin (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.8.0),
          ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Robotics Plugin Library - Development files
- Ignition Plugin is a component in the ignition framework, a set of libraries
+Description: Gazebo Plugin Library - Development files
+ Gazebo Plugin is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
  .
  Package contains the development files
@@ -48,8 +48,8 @@ Depends:
      libignition-plugin (= ${binary:Version}),
      ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Robotics Plugin Library - Debugging symbols
- Ignition Plugin is a component in the ignition framework, a set of libraries
+Description: Gazebo Plugin Library - Debugging symbols
+ Gazebo Plugin is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
  .
  Package contains debugging symbols
