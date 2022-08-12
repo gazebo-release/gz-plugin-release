@@ -53,3 +53,27 @@ Description: Gazebo Plugin Library - Debugging symbols
  designed to rapidly develop robot applications.
  .
  Package contains debugging symbols
+
+Package: libgz-plugin
+Depends: libignition-plugin, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-plugin-dev
+Depends: libignition-plugin-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-plugin-dbg
+Depends: libignition-plugin-dbg, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
