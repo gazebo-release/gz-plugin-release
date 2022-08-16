@@ -6,7 +6,7 @@ Priority: extra
 Build-Depends: cmake,
                debhelper (>= 7.0.50~),
                doxygen,
-               libignition-cmake2-dev (>= 2.8.0),
+               libignition-cmake2-dev (>= 2.13.0),
                python3,
                ruby-ronn
 Vcs-Browser: https://github.com/gazebosim/gz-plugin
@@ -29,7 +29,7 @@ Package: libignition-plugin-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-plugin (= ${binary:Version}),
-         libignition-cmake2-dev (>= 2.8.0),
+         libignition-cmake2-dev (>= 2.13.0),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Plugin Library - Development files

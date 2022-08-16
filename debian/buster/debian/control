@@ -6,12 +6,12 @@ Priority: extra
 Build-Depends: cmake,
                debhelper (>= 7.0.50~),
                doxygen,
-               libignition-cmake2-dev (>= 2.8.0),
+               libignition-cmake2-dev (>= 2.13.0),
                python3,
                ruby-ronn
-Vcs-Browser: https://bitbucket.org/ignitionrobotics/ign-plugin-release
-Vcs-Hg: https://bitbucket.org/ignitionrobotics/ign-plugin-release
-Homepage: https://bitbucket.org/ignitionrobotics/ign-plugin
+Vcs-Browser: https://github.com/gazebosim/gz-plugin
+Vcs-Git: https://github.com/gazebosim/gz-plugin.git
+Homepage: https://github.com/gazebosim/gz-plugin
 
 Package: libignition-plugin
 Architecture: any
@@ -19,16 +19,24 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Robotics Plugin Library - Shared library
+Description: Gazebo Plugin Library - Shared library
+ Gazebo Plugin is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Package contains the shared library
 
 Package: libignition-plugin-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-plugin (= ${binary:Version}),
-         libignition-cmake2-dev (>= 2.8.0),
+         libignition-cmake2-dev (>= 2.13.0),
          ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Robotics Plugin Library - Development files
+Description: Gazebo Plugin Library - Development files
+ Gazebo Plugin is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Package contains the development files
 
 Package: libignition-plugin-dbg
 Architecture: any
@@ -38,4 +46,32 @@ Depends:
      libignition-plugin (= ${binary:Version}),
      ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Robotics Plugin Library - Debugging symbols
+Description: Gazebo Plugin Library - Debugging symbols
+ Gazebo Plugin is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Package contains debugging symbols
+
+Package: libgz-plugin
+Depends: libignition-plugin, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-plugin-dev
+Depends: libignition-plugin-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-plugin-dbg
+Depends: libignition-plugin-dbg, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
